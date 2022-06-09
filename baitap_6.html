@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Nhập doanh số ngày:</h3> <br>
+<input type="number" id="hienthi">
+<input type="button" value="Tính hoa hồng" onclick="tinh()"> <br>
+<p id="hoahong"></p>
+</body>
+</html>
+
+<script>
+    function tinh() {
+        let st = document.getElementById('hienthi').value;
+        let sotien = Number(st)
+
+        if (sotien >= 1000000) {
+            document.getElementById('hoahong').innerText = (sotien * 10) / 100
+
+        } else if (sotien >= 500000) {
+            document.getElementById('hoahong').innerText = (sotien * 7) / 100
+
+        } else {
+            document.getElementById('hoahong').innerText = (sotien * 5) / 100
+        }
+    }
+</script>

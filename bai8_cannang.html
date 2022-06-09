@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let weight = prompt('Cân nặng(KG):')
+    // let weight = number('weight')
+    let height = prompt('Chiều cao(M):')
+    // let height = number('height')
+    let bmi = weight / (height^2)
+
+    if (bmi < 18.5) {
+        alert('Suy dinh dưỡng')
+    } else if (bmi < 25) {
+        alert('Thân hình hoàn toàn bình thường')
+    } else if (bmi < 30) {
+        alert('Thừa cân')
+    } else {
+        alert('Péo phì')
+    }
+
+</script>

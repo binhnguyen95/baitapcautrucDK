@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form >
+    <h1>Kiểm tra số ngày trong tháng</h1> <br>
+
+    <input type="number" id="thangmay">
+
+    <input type="button" value="check" onclick="anvaoday()"> <br>
+
+    <q id="ngay"></q>
+</form>
+
+</body>
+</html>
+
+<script>
+    let thang1 = "1"
+    let thang2 = '2'
+    let thang3 = '3'
+    let thang4 = '4'
+
+    function anvaoday() {
+        let thang = document.getElementById('thangmay').value;
+        switch (thang) {
+            case thang1:
+            document.getElementById('ngay').innerText = 'Tháng ' + thang + " có 31 ngày"
+                break;
+
+            case thang2:
+                document.getElementById('ngay').innerText = 'Tháng ' + thang + ' có 32 ngày'
+                break;
+
+            case thang3:
+                document.getElementById('ngay').innerText = 'Tháng ' + thang + ' có 33 ngày'
+                break;
+
+            case thang4:
+                document.getElementById('ngay').innerText = 'Tháng ' + thang + ' có 34 ngày'
+                break;
+
+                default:
+                    document.getElementById('ngay').innerText = '??? :D ???'
+        }
+    }
+
+
+</script>

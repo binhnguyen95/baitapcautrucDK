@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Điểm bài kiểm tra: <input type="number" id="so1"> <br>
+    Điểm thi giữa kì: <input type="number" id="so2"> <br>
+    Điểm thi cuối kì: <input type="number" id="so3"> <br> <br>
+    <input type="button" onclick="tinhdiem()" value="Tinh"> <br>
+    <h2 id="ketqua"></h2>
+</form>
+</body>
+</html>
+
+<script>
+        function tinhdiem() {
+            let kiemtra = document.getElementById('so1').value;
+            let kt = parseFloat(kiemtra);
+            let giuaki = document.getElementById('so2').value;
+            let gk = parseFloat(giuaki);
+            let cuoiki = document.getElementById('so3').value;
+            let ck = parseFloat(cuoiki)
+            let trungbinh = (kt + gk + ck) / 3
+
+            if (trungbinh >= 8) {
+                document.getElementById('ketqua').innerText = 'Học lực giỏi'
+
+            } else if (trungbinh >= 6.5) {
+                document.getElementById('ketqua').innerText = 'Học lực khá'
+
+            } else if (trungbinh >= 5) {
+                document.getElementById('ketqua').innerText = 'Học lực trung bình'
+
+            } else if (trungbinh >= 3.5) {
+                document.getElementById('ketqua').innerText = 'Học lực yếu'
+
+            } else {
+                document.getElementById('ketqua').innerText = 'Đúp'
+            }
+        }
+</script>
